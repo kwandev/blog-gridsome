@@ -14,22 +14,10 @@ const postcssPlugins = [
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
-  siteName: 'khwan-blog',
+  siteName: 'khwan',
   siteDescription: '그냥',
   siteUrl: 'https://gridsome-portfolio-starter.netlify.com',
   plugins: [
-    {
-      use: '@gridsome/vue-remark',
-      options: {
-        typeName: 'Documentation', // Required
-        baseDir: './docs', // Where .md files are located
-        pathPrefix: '/docs', // Add route prefix. Optional
-        template: './src/templates/Documentation.vue', // Optional
-        plugins: [
-          [ 'gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ]
-      ],
-      }
-    },
     {
       use: '@gridsome/source-filesystem',
       options: {

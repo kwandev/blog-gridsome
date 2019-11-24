@@ -14,7 +14,7 @@
       </div>
       <div class="markdown-body mb-8" v-html="$page.post.content" />
       <div class="mb-8">
-        <g-link to="/blog" class="font-bold uppercase">Back to Blog</g-link>
+        <a href="#" class="font-bold uppercase" @click="backToPage">&larr; Back</a>
       </div>
     </div>
   </Layout>
@@ -39,6 +39,11 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title
+    }
+  },
+  methods: {
+    backToPage () {
+      this.$router.back()
     }
   }
 }
