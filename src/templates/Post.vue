@@ -13,9 +13,12 @@
         </g-link>
       </div>
       <div class="markdown-body mb-8" v-html="$page.post.content" />
-      <div class="mb-8">
+
+      <div class="mb-20">
         <a href="#" class="font-bold uppercase" @click="backToPage">&larr; Back</a>
       </div>
+
+      <vue-disqus shortname="leekyeonghwanBlog" :identifier="$page.post.title"></vue-disqus>
     </div>
   </Layout>
 </template>
