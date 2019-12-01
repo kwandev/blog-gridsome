@@ -18,7 +18,7 @@
         <a href="#" class="font-bold uppercase" @click="backToPage">&larr; Back</a>
       </div>
 
-      <vue-disqus shortname="leekyeonghwanBlog" :identifier="$page.post.title"></vue-disqus>
+      <vue-disqus shortname="leekyeonghwanblog" :identifier="$page.post.title"></vue-disqus>
     </div>
   </Layout>
 </template>
