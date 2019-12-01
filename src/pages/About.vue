@@ -27,8 +27,8 @@
     </div>
 
     <div class="overflow-x-hidden">
-      <div id="skill-stack" class="container-inner mx-auto text-xl border-t border-gray-500 border-b py-16 mb-16 relative">
-        <h2 class="font-bold mb-6">기술스택</h2>
+      <div id="contact-me" class="container-inner mx-auto text-xl border-t border-gray-500 border-b py-16 mb-16 relative">
+        <h2 class="font-bold mb-6">Contact me</h2>
 
         <div class="absolute right-0" style="top: 50px; transform: translate(100%) rotate(180deg)">
           <svg width="170px" height="170px"><use xlink:href="#dots-triangle" /></svg>
@@ -36,42 +36,19 @@
 
         <ul class="text-lg sm:text-xl">
           <li class="mb-6">
-            <div>🚀 언어/기술</div>
-            <div class="pl-8 text-lg text-gray-600">HTML / CSS / Sass / JavaScript / ES6+</div>
+            <div><a href="/">🚀 블로그</a></div>
+            <div class="pl-8 text-lg text-gray-600">blog.khwan.kr</div>
           </li>
           <li class="mb-6">
-            <div>🛠 프레임워크/라이브러리</div>
-            <div class="pl-8 text-lg text-gray-600">Vue / jQuery / Bootstrap / Semantic UI</div>
+            <div><a href="mailto:rudghks7816@gmail.com">✉ 이메일</a></div>
+            <div class="pl-8 text-lg text-gray-600">rudghks7816@gmail.com</div>
           </li>
           <li class="mb-6">
-            <div>💻 서버/DevOps</div>
-            <div class="pl-8 text-lg text-gray-600">Webpack / ESLint / npm / yarn / git / svn</div>
-          </li>
-          <li class="mb-6">
-            <div>📈 Tools/기타</div>
-            <div class="pl-8 text-lg text-gray-600">VSCode / JetBrains / SourceTree / git-fork / RESTful API</div>
+            <div><a href="https://github.com/khwan7816" target="_blank">🔗 Github</a></div>
+            <div class="pl-8 text-lg text-gray-600">https://github.com/khwan7816</div>
           </li>
         </ul>
       </div> <!-- end skill stack -->
-    </div>
-
-    <div class="overflow-x-hidden border-gray-200 border-b">
-      <div class="get-to-know-me container-inner mx-auto text-xl pb-16 relative">
-        <h2 class="font-bold mb-6" id="about">Get to know me:</h2>
-
-        <div class="absolute left-0" style="top: 50px; transform: translateX(-100%)">
-          <svg width="170px" height="170px"><use xlink:href="#dots-triangle" /></svg>
-        </div>
-
-        <div class="flex flex-col sm:flex-row justify-between items-center mb-16">
-          <div><g-image src="../../static/avatar.jpg" alt="avatar" class="w-32 h-32 rounded-full mb-8 lg:mb-0" /></div>
-          <div class="flex-1 text-lg sm:text-xl ml-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quae architecto minus molestias iusto ducimus fuga quo quia libero dignissimos, fugiat modi assumenda debitis laboriosam.</div>
-        </div>
-
-        <div class="responsive-container">
-          <iframe class="responsive-iframe w-full h-full top-0 left-0 border-0" src="https://www.youtube.com/embed/uHo6o1TNQeE" style="border:0;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div> <!-- end get-to-know me -->
     </div>
   </Layout>
 </template>
