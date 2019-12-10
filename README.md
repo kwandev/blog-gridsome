@@ -1,12 +1,14 @@
-# Gridsome Portfolio Starter
+# khwan 블로그
 
-A simple portfolio starter theme for Gridsome
+[gridsome](https://gridsome.org/)을 이용해 제작한 블로그입니다.  
+starter template을 이용했고, 일부 불필요한 화면은 제외하고 disqus나 google analytics만 추가로 붙인 상태입니다. 해당 기능 또한 gridsome 플러그인이 제곧되고 있으므로 어렵지 않게 붙일 수 있습니다.
 
-![screenshot](https://user-images.githubusercontent.com/4316355/55691365-a2403380-596b-11e9-93be-05b846ec7760.jpg)
+아래 Feature 및 Installation은 스타터 템플릿에 적혀있는 그대로입니다.
+
 
 ## Demo URL
 
-[https://gridsome-portfolio-starter.netlify.com](https://gridsome-portfolio-starter.netlify.com)
+[https://blog.khwan.kr](https://blog.khwan.kr)
 
 ## Features
 
@@ -31,14 +33,3 @@ A simple portfolio starter theme for Gridsome
 1. `cd gridsome-portfolio-starter`
 1. `npm install`
 1. `gridsome develop` to start a local dev server at `http://localhost:8080`
-
-## Notes
-
- - Based on my [personal portfolio website](https://andremadarang.com). I wanted to create an open source version with more features.
- - Check out a [screencast I did](https://www.youtube.com/watch?v=uHo6o1TNQeE) where I go through the process of building my website.
- - Illustrations from [unDraw](https://undraw.co)
- - Search is based on [Fuse.js](https://fusejs.io) and [vue-fuse](https://github.com/shayneo/vue-fuse). It only searches the title and summary of posts for now. Some tweaking may be necessary to get it to search to your liking. Check out the fuse documentation for search settings. A `search.json` index file is generated at build time. This happens in `gridsome.server.js`.
- - Check out these other Gridsome Starters where I got some ideas from:
-    - [Gridsome Starter Blog](https://github.com/gridsome/gridsome-starter-blog)
-    - [Gridsome Starter Bleda](https://github.com/cossssmin/gridsome-starter-bleda)
-    - [Jigsaw Starter Blog](https://jigsaw.tighten.co/docs/starter-templates/) - I got a lot of design inspiration from this starter theme.
