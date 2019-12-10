@@ -9,8 +9,18 @@
           <span>{{ post.node.timeToRead }} min read</span>
         </div>
 
-        <div class="text-lg mb-4">
+        <div class="text-lg mb-6">
           {{ post.node.summary }}
+        </div>
+
+        <div class="mb-6">
+          <g-link
+            :to="tag.path"
+            v-for="tag in post.node.tags"
+            :key="tag.id"
+            class="bg-gray-300 rounded-full px-4 py-2 mr-2 hover:bg-green-300">
+            {{ tag.title }}
+          </g-link>
         </div>
 
         <div class="mb-8">
@@ -44,6 +54,10 @@ query Posts ($page: Int) {
         summary
         timeToRead
         path
+        tags {
+          title
+          path
+        }
       }
     }
   }
