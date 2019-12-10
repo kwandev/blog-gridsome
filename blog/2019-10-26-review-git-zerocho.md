@@ -1,7 +1,7 @@
 ---
-title: (Review) 12가지 명령어로 배우는 Git
+title: 12가지 명령어로 배우는 Git 리뷰
 date: 2019-10-26 18:23:59
-summary: git 강의 후기
+summary: git 동영상 강의 리뷰
 tags: ['review', 'git']
 ---
 

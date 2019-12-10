@@ -2,7 +2,7 @@
 title: JavaScript this 정리
 date: 2019-10-09 13:05:23
 summary: javascript this 바인딩
-tags: ['JavaScript']
+tags: ['javascript']
 ---
 
 자바스크립트에서 `this`는 호출되는 방식에 따라 달라지기 때문에 이해하기 너무 어려운 관계로 아예 대표적인 몇 가지를 그냥 외워버리기로 함.
