@@ -19,11 +19,11 @@ export default function (Vue, { router, head, isClient }) {
 
   head.meta.push({
     name: 'keywords',
-    content: 'khwan, blog, frontend, html, css, vue'
+    content: 'gridsome, front-end, html, css, javascript, vue'
   })
   head.meta.push({
     name: 'description',
-    content: 'khwan\'s Blog'
+    content: 'Khwan\'s Blog'
   })
   head.meta.push({
     name: 'author',

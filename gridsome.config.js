@@ -14,7 +14,7 @@ const postcssPlugins = [
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
-  siteName: 'khwan',
+  siteName: 'Khwan\'s Blog',
   siteDescription: '그냥',
   siteUrl: 'https://blog.khwan.kr',
   plugins: [
