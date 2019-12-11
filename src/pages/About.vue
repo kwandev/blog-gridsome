@@ -47,6 +47,10 @@
             <div><a href="https://github.com/khwan7816" target="_blank">🔗 Github</a></div>
             <div class="pl-8 text-lg text-gray-600">https://github.com/khwan7816</div>
           </li>
+          <li class="mb-6">
+            <div><a href="https://khwan-portfolio.netlify.com" target="_blank">📚 포트폴리오</a></div>
+            <div class="pl-8 text-lg text-gray-600">https://khwan-portfolio.netlify.com</div>
+          </li>
         </ul>
       </div> <!-- end skill stack -->
     </div>
