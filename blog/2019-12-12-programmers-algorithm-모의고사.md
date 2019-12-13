@@ -1,7 +1,7 @@
 ---
 title: '[Level 1] 모의고사 - 프로그래머스 코딩테스트 연습'
 date: 2019-12-12 20:15:00
-summary: 2018 KAKAO BLIND RECRUITMENT - 프로그래머스 코딩테스트 연습 정리
+summary: 코딩테스트 연습 > 완전탐색 > 모의고사
 tags: ['알고리즘', '코딩테스트']
 ---
 
