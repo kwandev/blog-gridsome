@@ -1,5 +1,5 @@
 ---
-title: 'Level 1 연습문제 - 프로그래머스 코딩테스트 연습'
+title: 'Level 1 연습문제 (1) - 프로그래머스 코딩테스트 연습'
 date: 2019-12-14 14:50:00
 summary: 코딩테스트 연습 > 연습문제 Level1 문제들 정리
 tags: ['알고리즘', '코딩테스트']
@@ -176,6 +176,114 @@ function solution(arr, divisor) {
 ```
 
 숫자정렬이 크기대로 이루어지지 않는다는 것만 유의하면 어렵지 않게 풀 수 있음.
+
+---------
+
+## 두 정수 사이의 합
+
+<details>
+  <summary>문제 보기</summary>
+
+두 정수 a, b가 주어졌을 때 a와 b 사이에 속한 모든 정수의 합을 리턴하는 함수, solution을 완성하세요.
+예를 들어 a = 3, b = 5인 경우, 3 + 4 + 5 = 12이므로 12를 리턴합니다.
+
+### 제한사항
+
+* a와 b가 같은 경우는 둘 중 아무 수나 리턴하세요.
+* a와 b는 -10,000,000 이상 10,000,000 이하인 정수입니다.
+* a와 b의 대소관계는 정해져있지 않습니다.
+
+### 입출력 예
+
+arr | divisor | return
+--- | --- | ---
+[5, 9, 7, 10] | 5 | [5, 10]
+[2, 36, 1, 3] | 1 | [1, 2, 3, 36]
+[3, 2, 6] | 10 | [-1]
+
+### 입출력 예 설명
+
+* 입출력 예#1  
+  arr의 원소 중 5로 나누어 떨어지는 원소는 5와 10입니다. 따라서 [5, 10]을 리턴합니다.
+* 입출력 예#2  
+  arr의 모든 원소는 1으로 나누어 떨어집니다. 원소를 오름차순으로 정렬해 [1, 2, 3, 36]을 리턴합니다.
+* 입출력 예#3  
+  3, 2, 6은 10으로 나누어 떨어지지 않습니다. 나누어 떨어지는 원소가 없으므로 [-1]을 리턴합니다.
+
+</details>
+
+### 풀이
+
+```javascript
+function solution(arr, divisor) {
+    var divisorArray = arr.filter(item => item % divisor === 0);
+    
+    if (divisorArray.length > 0) {
+        return divisorArray.sort((a, b) => a - b);
+    }
+
+    return [-1];
+}
+```
+
+숫자정렬이 크기대로 이루어지지 않는다는 것만 유의하면 어렵지 않게 풀 수 있음.
+
+---------
+
+## 문자열 내 p와 y의 개수
+
+<details>
+  <summary>문제 보기</summary>
+
+대문자와 소문자가 섞여있는 문자열 s가 주어집니다. s에 'p'의 개수와 'y'의 개수를 비교해 같으면 True, 다르면 False를 return 하는 solution를 완성하세요. 'p', 'y' 모두 하나도 없는 경우는 항상 True를 리턴합니다. 단, 개수를 비교할 때 대문자와 소문자는 구별하지 않습니다.
+
+예를 들어 s가 pPoooyY면 true를 return하고 Pyy라면 false를 return합니다.
+
+### 제한사항
+
+* 문자열 s의 길이 : 50 이하의 자연수
+* 문자열 s는 알파벳으로만 이루어져 있습니다.
+
+### 입출력 예
+
+s | answer
+--- | ---
+pPoooyY | true
+Pyy | false
+
+### 입출력 예 설명
+
+* 입출력 예 #1  
+  'p'의 개수 2개, 'y'의 개수 2개로 같으므로 true를 return 합니다.
+* 입출력 예 #2  
+  'p'의 개수 1개, 'y'의 개수 2개로 다르므로 false를 return 합니다.
+
+</details>
+
+### 풀이
+
+```javascript
+function solution(s){
+  var stringArr = s.split('');
+  var p = stringArr.filter(item => ['p', 'P'].includes(item));
+  var y = stringArr.filter(item => ['y', 'Y'].includes(item));
+
+  return p.length === y.length;
+}
+```
+
+처음엔 위처럼 풀었으나, 다른 사람의 풀이를 보니 훨씬 간단한 방법이 있어 그 답변도 적는다. 정규식은 확실히 알아둘수록 개발할 때 도움이 많이 될 것 같다.
+
+```javascript
+function solution(s){
+  var p = s.match(/p/gi) || [];
+  var y = s.match(/y/gi) || [];
+
+  return p.length === y.length;
+}
+```
+
+`match` 함수는 값이 없을경우 `null`을 반환하기 때문에 빈 배열을 기본값으로 추가해두었음.
 
 ---------
 
