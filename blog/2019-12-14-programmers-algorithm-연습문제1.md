@@ -195,38 +195,26 @@ function solution(arr, divisor) {
 
 ### 입출력 예
 
-arr | divisor | return
+a | b | return
 --- | --- | ---
-[5, 9, 7, 10] | 5 | [5, 10]
-[2, 36, 1, 3] | 1 | [1, 2, 3, 36]
-[3, 2, 6] | 10 | [-1]
-
-### 입출력 예 설명
-
-* 입출력 예#1  
-  arr의 원소 중 5로 나누어 떨어지는 원소는 5와 10입니다. 따라서 [5, 10]을 리턴합니다.
-* 입출력 예#2  
-  arr의 모든 원소는 1으로 나누어 떨어집니다. 원소를 오름차순으로 정렬해 [1, 2, 3, 36]을 리턴합니다.
-* 입출력 예#3  
-  3, 2, 6은 10으로 나누어 떨어지지 않습니다. 나누어 떨어지는 원소가 없으므로 [-1]을 리턴합니다.
+3 | 5 | 12
+3 | 3 | 3
+5 | 3 | 12
 
 </details>
 
 ### 풀이
 
 ```javascript
-function solution(arr, divisor) {
-    var divisorArray = arr.filter(item => item % divisor === 0);
+function solution(a, b) {
+    var start = a > b ? b : a;
+    var end = a > b ? a : b;
     
-    if (divisorArray.length > 0) {
-        return divisorArray.sort((a, b) => a - b);
-    }
-
-    return [-1];
+    return (start + end) * (end - start + 1) / 2;
 }
 ```
 
-숫자정렬이 크기대로 이루어지지 않는다는 것만 유의하면 어렵지 않게 풀 수 있음.
+처음에는 reduce 함수를 이용해 반복하려 했으나, 제한조건을 보면 -천만 ~ 천만 까지의 큰 수이기 때문에 굉장히 비효율적이라고 생각하며 못풀고 있었다. 찾아보니 가우스가 등차수열의 합을 구한 식이 있다고 한다. 두 수의 합과 두수의 차 + 1 을 곱한 뒤 2로 나누면 된다고 한다.
 
 ---------
 
@@ -285,5 +273,165 @@ function solution(s){
 
 `match` 함수는 값이 없을경우 `null`을 반환하기 때문에 빈 배열을 기본값으로 추가해두었음.
 
+---------
+
+
+## 문자열 내림차순으로 배치하기
+
+<details>
+  <summary>문제 보기</summary>
+
+문자열 s에 나타나는 문자를 큰것부터 작은 순으로 정렬해 새로운 문자열을 리턴하는 함수, solution을 완성해주세요.  
+s는 영문 대소문자로만 구성되어 있으며, 대문자는 소문자보다 작은 것으로 간주합니다.
+
+### 제한사항
+
+* str은 길이 1 이상인 문자열입니다.
+
+### 입출력 예
+
+s | return
+--- | ---
+Zbcdefg | gfedcbZ
+
+</details>
+
+### 풀이
+
+```javascript
+function solution(s) {
+    return s.split('').sort().reverse().join('');
+}
+```
+
+문자 sort시에는 대문자 -> 소문자순의 오름차순 정렬이니 이를 뒤집어주면 되겠다.
+
+---------
+
+
+## 문자열 다루기 기본
+
+<details>
+  <summary>문제 보기</summary>
+
+문자열 s의 길이가 4 혹은 6이고, 숫자로만 구성돼있는지 확인해주는 함수, solution을 완성하세요. 예를 들어 s가 a234이면 False를 리턴하고 1234라면 True를 리턴하면 됩니다.
+
+### 제한사항
+
+* `s`는 길이 1 이상, 길이 8 이하인 문자열입니다.
+
+### 입출력 예
+
+s | return
+--- | ---
+"a234" | false
+"1234" | true
+
+</details>
+
+### 풀이
+
+```javascript
+function solution(s) {
+    return [4, 6].includes((parseInt(s) + '').length)
+}
+```
+
+위처럼 풀면, 문자가 껴있는 경우 `paserInt`시에 `NaN`이 나올것이고 `NaN`은 문자열로 치환하고 길이를 구해도 3이기 때문에 문제는 해결된다. 하지만 조금 더 명확하게 처리를 하려면 `parseInt` 전에 `isNaN` 함수나 정규식을 이용해 숫자인지 여부를 체크하는 방법도 있겠다.
+
+---------
+
+## 서울에서 김서방 찾기
+
+<details>
+  <summary>문제 보기</summary>
+
+String형 배열 seoul의 element중 Kim의 위치 x를 찾아, 김서방은 x에 있다는 String을 반환하는 함수, solution을 완성하세요. seoul에 Kim은 오직 한 번만 나타나며 잘못된 값이 입력되는 경우는 없습니다.
+
+### 제한사항
+
+* seoul은 길이 1 이상, 1000 이하인 배열입니다.
+* seoul의 원소는 길이 1 이상, 20 이하인 문자열입니다.
+* Kim은 반드시 seoul 안에 포함되어 있습니다.
+
+### 입출력 예
+
+seoul | return
+--- | ---
+["Jane", "Kim"] | "김서방은 1에 있다"
+
+</details>
+
+### 풀이
+
+```javascript
+function solution(seoul) {
+    return `김서방은 ${seoul.indexOf('Kim')}에 있다`;
+}
+```
+
+---------
+
+
+## 소수찾기
+
+<details>
+  <summary>문제 보기</summary>
+
+1부터 입력받은 숫자 n 사이에 있는 소수의 개수를 반환하는 함수, solution을 만들어 보세요.
+
+소수는 1과 자기 자신으로만 나누어지는 수를 의미합니다.  
+(1은 소수가 아닙니다.)
+
+### 제한사항
+
+* n은 2이상 1000000이하의 자연수입니다.
+
+### 입출력 예
+
+n | result
+--- | ---
+10 | 4
+5 | 3
+
+### 입출력 예 설명
+
+* 입출력 예 #1  
+  1부터 10 사이의 소수는 [2,3,5,7] 4개가 존재하므로 4를 반환
+* 입출력 예 #2  
+  1부터 5 사이의 소수는 [2,3,5] 3개가 존재하므로 3를 반환
+</details>
+
+### 풀이
+
+```javascript
+function solution(n) {
+  // true인 값은 소수라고 가정, 0번 index를 정수 0이라고 생각하고 풀기 위해 n + 1개 만큼 배열 생성
+  let arr = Array(n + 1).fill(true);
+  
+  // 이미 소수라고 가정했으니 제곱부터 로직을 시작함
+  for (let i = 2; i ** 2 <= n; i++) {
+    if (arr[i]) {
+      // 해당 수의 배수는 모두 소수가 아님으로 false 처리
+      for (let j = i ** 2; j <= n; j += i) {
+          arr[j] = false;
+      }
+    }
+  }
+  
+  // 0과 1은 제외
+  arr = arr.slice(2).filter(item => item);
+  
+  return arr.length;
+}
+```
+
+해당 문제는 무식하게 일일히 계산하여 풀려고 했으나 테스트는 통과해도 채점에서 실패가 됐다. 일일히 계산을 하다보니 자연스레 성능부분에서 탈락이 됐는데, 인터넷을 찾아보니 소수를 구하는 식 중에서 에라토스테네스의 체라는 식을 발견했고, 그 식을 적용하고 풀 수 있었다. 에라토스테네스의 체는 자기 자신을 제외한 배수의 값을 제외해 나간다는 점이 핵심이다.
+
+level 1 문제들 중에선 가장 어려운 편에 속하지 않았나싶다.
+
+#### 참고
+* [위키백과](https://ko.wikipedia.org/wiki/%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4%EC%9D%98_%EC%B2%B4)
+* [https://junkim.netlify.com/posts/programmers0807](https://junkim.netlify.com/posts/programmers0807)
 ---------
 
