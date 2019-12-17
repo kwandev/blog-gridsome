@@ -136,3 +136,141 @@ charCode를 n만큼 증가시키면 된다. 다만 z는 a로 Z는 A로 돌아가
 
 ---------
 
+## 약수의 합
+
+<details>
+  <summary>문제 보기</summary>
+
+정수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.
+
+### 제한 조건
+
+* n은 0 이상 3000이하인 정수입니다.
+
+### 입출력 예
+
+n | return
+--- | ---
+12 | 28
+5 | 6
+
+### 입출력 예 설명
+
+* 입출력 예 #1  
+  12의 약수는 1, 2, 3, 4, 6, 12입니다. 이를 모두 더하면 28입니다.
+* 입출력 예 #2  
+  5의 약수는 1, 5입니다. 이를 모두 더하면 6입니다.
+
+</details>
+
+### 풀이
+
+```javascript
+function solution(n) {
+    var answer = 0;
+    for (var i = 1; i <= n; i++) {
+        if (n % i === 0) {
+            answer += i;
+        }
+    }
+    return answer;
+}
+```
+
+n을 1부터 나누어 나머지가 0인 수 = 약수를 찾아 더해준다.
+
+---------
+
+## 이상한 문자 만들기
+
+<details>
+  <summary>문제 보기</summary>
+
+문자열 s는 한 개 이상의 단어로 구성되어 있습니다. 각 단어는 하나 이상의 공백문자로 구분되어 있습니다. 각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로 바꾼 문자열을 리턴하는 함수, solution을 완성하세요.
+
+### 제한 조건
+
+* 문자열 전체의 짝/홀수 인덱스가 아니라, 단어(공백을 기준)별로 짝/홀수 인덱스를 판단해야합니다.
+* 첫 번째 글자는 0번째 인덱스로 보아 짝수번째 알파벳으로 처리해야 합니다.
+
+### 입출력 예
+
+s | return
+--- | ---
+"try hello world" | "TrY HeLlO WoRlD"
+
+### 입출력 예 설명
+
+"try hello world"는 세 단어 "try", "hello", "world"로 구성되어 있습니다. 각 단어의 짝수번째 문자를 대문자로, 홀수번째 문자를 소문자로 바꾸면 "TrY", "HeLlO", "WoRlD"입니다. 따라서 "TrY HeLlO WoRlD" 를 리턴합니다.
+
+</details>
+
+### 풀이
+
+```javascript
+function solution(s) {
+    return s.split(' ').map(word => {
+        return word.split('').map((char, index) => {
+            return index % 2 === 0 ? char.toUpperCase() : char.toLowerCase();
+        }).join('');
+    }).join(' ');
+}
+```
+
+---------
+
+## 자릿수 더하기
+
+<details>
+  <summary>문제 보기</summary>
+
+자연수 N이 주어지면, N의 각 자릿수의 합을 구해서 return 하는 solution 함수를 만들어 주세요.  
+예를들어 N = 123이면 1 + 2 + 3 = 6을 return 하면 됩니다.
+
+### 제한 조건
+
+* N의 범위 : 100,000,000 이하의 자연수
+
+### 입출력 예
+
+N | answer
+--- | ---
+123 | 6
+987 | 24
+
+### 입출력 예 설명
+
+* 입출력 예 #1  
+  문제의 예시와 같습니다.
+* 입출력 예 #2  
+  9 + 8 + 7 = 24이므로 24를 return 하면 됩니다.
+</details>
+
+### 풀이
+
+```javascript
+function solution(n) {
+    return ('' + n).split('').reduce((acc, curr) => {
+        return acc + parseInt(curr);
+    }, 0);
+}
+```
+
+처음엔 위처럼 문자로 치환해서 한 글자씩 더해주는 풀이를 했는데 아래와 같은 방법도 있다고 해서 적어둔다. 무조건 문자로 쪼개서 푸는 것보단 수학적인 접근을 하는 방법을 항상 생각해야겠다.
+
+```javascript
+function solution(n) {
+    var sum = 0;
+    while (n > 0) {
+        sum += n % 10;
+        n = parseInt(n / 10)
+    }
+    return sum;
+}
+```
+
+
+
+---------
+
+
