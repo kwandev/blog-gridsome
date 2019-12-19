@@ -14,7 +14,7 @@
       <p class="text-lg sm:text-xl">
         Front-end 개발자 이경환입니다.<br>
         FE, BE 모두에 흥미를 가지고 있으며, FE를 메인으로 하여 최종적으로는 풀스택개발자를 지향합니다.
-        새로운 기술에 거부감 없이 흥미를 가지고 배우려는 편입니다. 최근에는 이직을 위한 알고리즘, 코딩테스트, NodeJS에 관심을 갖고 있습니다.
+        새로운 기술에 거부감 없이 흥미를 가지고 배우려는 편입니다. 최근에는 알고리즘, 코딩테스트, NodeJS에 관심을 갖고 있습니다.
       </p>
       <div class="flex justify-between items-center py-6">
         <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0">
