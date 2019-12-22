@@ -5,7 +5,7 @@ summary: 코딩테스트 연습 > 연습문제 Level1 문제들 정리
 tags: ['알고리즘', '코딩테스트']
 ---
 
-*Last Update: 2019-12-20*
+*Last Update: 2019-12-22*
 
 1. [Level 1 연습문제 (1) 바로가기](/blog/codingtest/2019-12-14-programmers-algorithm-1)
 2. Level 1 연습문제 (2)
@@ -377,5 +377,68 @@ function solution(n) {
 
 주어진 수의 제곱근이 양의 정수 x와 같으면 되기 때문에 간단하게 해결 가능하다.
 `sqrt ** 2 === n` 으로도 비교가 가능하다.
+
+---------
+
+## 문자열 내 마음대로 정렬하기
+
+<details>
+  <summary>문제 보기</summary>
+
+문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다. 예를 들어 strings가 ["sun", "bed", "car"]이고 n이 1이면 각 단어의 인덱스 1의 문자 "u", "e", "a"로 strings를 정렬합니다.
+
+### 제한 조건
+
+* strings는 길이 1 이상, 50이하인 배열입니다.
+* strings의 원소는 소문자 알파벳으로 이루어져 있습니다.
+* strings의 원소는 길이 1 이상, 100이하인 문자열입니다.
+* 모든 strings의 원소의 길이는 n보다 큽니다.
+* 인덱스 1의 문자가 같은 문자열이 여럿 일 경우, 사전순으로 앞선 문자열이 앞쪽에 위치합니다.
+
+### 입출력 예
+
+strings | n | return
+--- | ---
+["sun", "bed", "car"] | 1 | ["car", "bed", "sun"]
+["abce", "abcd", "cdx"] | 2 | ["abcd", "abce", "cdx"]
+
+### 입출력 예 설명
+
+* 입출력 예 1  
+  "sun", "bed", "car"의 1번째 인덱스 값은 각각 "u", "e", "a" 입니다. 이를 기준으로 strings를 정렬하면 ["car", "bed", "sun"] 입니다.
+* 입출력 예 2  
+  "abce"와 "abcd", "cdx"의 2번째 인덱스 값은 "c", "c", "x"입니다. 따라서 정렬 후에는 "cdx"가 가장 뒤에 위치합니다. "abce"와 "abcd"는 사전순으로 정렬하면 "abcd"가 우선하므로, 답은 ["abcd", "abce", "cdx"] 입니다.
+
+</details>
+
+### 풀이
+
+```javascript
+function solution(strings, n) {
+  var answer = strings.sort((a, b) => {
+    if (a[n] === b[n]) {
+      return a.localeCompare(b);
+    }
+
+    return a[n].localeCompare(b[n]);
+  });
+  
+  return answer;
+}
+```
+
+인덱스 값으로 정렬하라는 말을 처음엔 이해하지 못했는데, 뜻을 알고나니 간단했다. *입출력 예 1*을 기준으로 설명하면, u, e, a 를 기준으로 정렬하면 알파벳 순서대로 a, e, u가 되니 각 인덱스 값이 a, e, u인 car, bed, sun 순서가 되는 것이다.
+
+추가 제한 조건으로는 인덱스 값이 같을 경우는 인덱스 값 순서가 아닌 사전 순 정렬을 하게 되면 된다.
+
+`localeCompare`는 문자열을 비교하는 함수이다. 사전순으로 비교하기 때문에 문제에 아주 적합한 함수이다.
+
+```javascript
+'a'.localeCompare('a') // 0
+'A'.localeCompare('B') // -1
+'B'.localeCompare('A') // 1
+
+```
+
 
 ---------
