@@ -69,7 +69,7 @@ import PaginationPosts from '../components/PaginationPosts'
 
 export default {
   metaInfo: {
-    title: 'Khwan\'s Blog'
+    title: 'Blog list'
   },
   components: {
     PaginationPosts
