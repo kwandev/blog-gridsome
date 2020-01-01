@@ -612,6 +612,7 @@
 
   .markdown-body li>p {
     margin-top: 16px;
+    margin-bottom: .25rem;
   }
 
   .markdown-body li+li {
