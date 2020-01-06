@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'Khwan\'s Blog',
-  siteDescription: '그냥',
+  // siteDescription: '그냥',
   siteUrl: 'https://blog.khwan.kr',
   plugins: [
     {

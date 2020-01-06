@@ -44,8 +44,8 @@ export default {
     return {
       title: this.$page.post.title,
       meta: [
-        { name: 'description', content: this.$page.post.summary },
-        { name: 'keywords', content: this.$page.post.tags.map(item => item.title).join(', ') },
+        { vmid: 'description', name: 'description', content: this.$page.post.summary },
+        { vmid: 'keywords', name: 'keywords', content: this.$page.post.tags.map(item => item.title).join(', ') },
       ],
     }
   },

@@ -17,11 +17,14 @@ export default function (Vue, { router, head, isClient }) {
   Vue.use(VueFuse)
   Vue.use(VueDisqus)
 
+  head.htmlAttrs = { lang: 'ko' }
   head.meta.push({
+    vmid: 'keywords',
     name: 'keywords',
     content: 'gridsome, front-end, html, css, javascript, vue'
   })
   head.meta.push({
+    vmid: 'description',
     name: 'description',
     content: 'Khwan\'s Blog'
   })
@@ -34,5 +37,3 @@ export default function (Vue, { router, head, isClient }) {
     href: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700'
   })
 }
-
-
