@@ -2,7 +2,7 @@
 title: '실패율 - 프로그래머스 코딩테스트 연습'
 date: 2019-12-23 18:10:00
 summary: 2019 KAKAO BLIND RECRUITMENT - 프로그래머스 코딩테스트 연습 정리
-tags: ['알고리즘', '코딩테스트']
+tags: ['알고리즘', '코딩테스트', '프로그래머스']
 ---
 
 [2019 KAKAO BLIND RECRUITMENT의 실패율](https://programmers.co.kr/learn/courses/30/lessons/42889) 문제 풀이

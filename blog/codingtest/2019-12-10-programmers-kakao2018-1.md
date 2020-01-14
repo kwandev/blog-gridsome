@@ -2,7 +2,7 @@
 title: '[1차] 비밀지도 - 프로그래머스 코딩테스트 연습'
 date: 2019-12-10 18:36:41
 summary: 2018 KAKAO BLIND RECRUITMENT - 프로그래머스 코딩테스트 연습 정리
-tags: ['알고리즘', '코딩테스트']
+tags: ['알고리즘', '코딩테스트', '프로그래머스']
 ---
 
 이직 준비를 하면서 코딩테스트 연습을 하고 있는데, 프로그래머스라는 사이트의 문제를 풀어보기로 했다. 그 중 [2018 KAKAO BLIND RECRUITMENT의 [1차] 비밀지도](https://programmers.co.kr/learn/courses/30/lessons/17681)라는 문제 풀이

@@ -1,7 +1,7 @@
 ---
 title: JavaScript this 정리
 date: 2019-10-09 13:05:23
-summary: javascript this 바인딩
+summary: javascript this 바인딩에 대하여 정리해놓기
 tags: ['javascript']
 ---
 

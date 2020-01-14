@@ -2,7 +2,7 @@
 title: '[Level 2] 프린터 - 프로그래머스 코딩테스트 연습'
 date: 2019-12-31 13:57:45
 summary: 코딩테스트 연습 > 스택/큐 > 프린터
-tags: ['알고리즘', '코딩테스트']
+tags: ['알고리즘', '코딩테스트', '프로그래머스']
 ---
 
 [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) 문제 풀이

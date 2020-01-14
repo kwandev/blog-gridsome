@@ -14,7 +14,7 @@ const postcssPlugins = [
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
-  siteName: 'Khwan\'s Blog',
+  siteName: 'khwan Blog',
   // siteDescription: '그냥',
   siteUrl: 'https://khwan.kr',
   plugins: [
@@ -36,7 +36,7 @@ module.exports = {
       options: {
         contentTypeName: 'Post',
         feedOptions: {
-          title: 'khwan\'s Blog',
+          title: 'khwan Blog',
           feed_url: 'https://khwan.kr/rss.xml',
           site_url: 'https://khwan.kr'
         },

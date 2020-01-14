@@ -2,7 +2,7 @@
 title: '[Level 1] 모의고사 - 프로그래머스 코딩테스트 연습'
 date: 2019-12-12 20:15:00
 summary: 코딩테스트 연습 > 완전탐색 > 모의고사
-tags: ['알고리즘', '코딩테스트']
+tags: ['알고리즘', '코딩테스트', '프로그래머스']
 ---
 
 [모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840) 문제 풀이

@@ -60,7 +60,8 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About'
+    title: 'About',
+    description: 'Front-end 개발자 이경환입니다. 저에 대한 간단한 소개입니다.'
   }
 }
 </script>

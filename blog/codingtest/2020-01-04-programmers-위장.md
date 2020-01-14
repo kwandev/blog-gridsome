@@ -2,7 +2,7 @@
 title: '[Level 2] 위장 - 프로그래머스 코딩테스트 연습'
 date: 2020-01-04 17:25:33
 summary: 코딩테스트 연습 > 해시 > 위장
-tags: ['알고리즘', '코딩테스트']
+tags: ['알고리즘', '코딩테스트', '프로그래머스']
 ---
 
 [위장](https://programmers.co.kr/learn/courses/30/lessons/42578) 문제 풀이

@@ -19,16 +19,17 @@ export default function (Vue, { router, head, isClient }) {
 
   head.htmlAttrs = { lang: 'ko' }
   head.meta.push({
-    vmid: 'keywords',
+    key: 'keywords',
     name: 'keywords',
-    content: 'gridsome, front-end, html, css, javascript, vue'
+    content: 'gridsome, javascript, html, css, vue, 프론트엔드, khwan'
   })
   head.meta.push({
-    vmid: 'description',
+    key: 'description',
     name: 'description',
-    content: 'Khwan\'s Blog'
+    content: '프론트엔드 개발자 khwan입니다. 프론트엔드와 저에 대한 얘기들을 이것저것 기록합니다.'
   })
   head.meta.push({
+    key: 'author',
     name: 'author',
     content: 'khwan'
   })

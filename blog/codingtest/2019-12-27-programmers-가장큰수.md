@@ -2,7 +2,7 @@
 title: '[Level 2] 가장 큰 수 - 프로그래머스 코딩테스트 연습'
 date: 2019-12-27 18:10:00
 summary: 코딩테스트 연습 > 정렬 > 가장 큰 수
-tags: ['알고리즘', '코딩테스트']
+tags: ['알고리즘', '코딩테스트', '프로그래머스']
 ---
 
 [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746) 문제 풀이
