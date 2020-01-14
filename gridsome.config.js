@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 module.exports = {
   siteName: 'Khwan\'s Blog',
   // siteDescription: '그냥',
-  siteUrl: 'https://blog.khwan.kr',
+  siteUrl: 'https://khwan.kr',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -37,13 +37,13 @@ module.exports = {
         contentTypeName: 'Post',
         feedOptions: {
           title: 'khwan\'s Blog',
-          feed_url: 'https://blog.khwan.kr/rss.xml',
-          site_url: 'https://blog.khwan.kr/'
+          feed_url: 'https://khwan.kr/rss.xml',
+          site_url: 'https://khwan.kr'
         },
         feedItemOptions: node => ({
           title: node.title,
           description: node.summary,
-          url: 'https://blog.khwan.kr' + node.path,
+          url: 'https://khwan.kr' + node.path,
           author: 'khwan',
           date: node.date
         }),
