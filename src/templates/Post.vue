@@ -41,11 +41,15 @@ query Post ($path: String!) {
 <script>
 export default {
   metaInfo () {
+    const summary = this.$page.post.summary
+    const contents = this.$page.post.content.replace(/(<([^>]+)>)|\n/gi, '').substr(0, 115)
+    const description = summary + ' | ' + contents.substr(0, 115 - summary.length) + '..'
+    const keywords = this.$page.post.tags.map(item => item.title).join(', ')
     return {
       title: this.$page.post.title,
       meta: [
-        { vmid: 'description', name: 'description', content: this.$page.post.summary },
-        { vmid: 'keywords', name: 'keywords', content: this.$page.post.tags.map(item => item.title).join(', ') },
+        { key: 'description', name: 'description', content: description },
+        { key: 'keywords', name: 'keywords', content: keywords },
       ],
     }
   },

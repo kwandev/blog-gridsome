@@ -69,7 +69,7 @@ import PaginationPosts from '../components/PaginationPosts'
 
 export default {
   metaInfo: {
-    title: 'Blog list'
+    title: '글 목록'
   },
   components: {
     PaginationPosts

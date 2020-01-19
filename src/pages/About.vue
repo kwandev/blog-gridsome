@@ -37,7 +37,7 @@
         <ul class="text-lg sm:text-xl">
           <li class="mb-6">
             <div><a href="/">🚀 블로그</a></div>
-            <div class="pl-8 text-lg text-gray-600">blog.khwan.kr</div>
+            <div class="pl-8 text-lg text-gray-600">khwan.kr</div>
           </li>
           <li class="mb-6">
             <div><a href="mailto:rudghks7816@gmail.com">✉ 이메일</a></div>
@@ -60,7 +60,8 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About'
+    title: 'About',
+    description: 'Front-end 개발자 이경환입니다. 저에 대한 간단한 소개입니다.'
   }
 }
 </script>

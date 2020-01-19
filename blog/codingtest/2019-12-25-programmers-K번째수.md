@@ -2,7 +2,7 @@
 title: '[Level 1] K번째수 - 프로그래머스 코딩테스트 연습'
 date: 2019-12-25 21:15:00
 summary: 코딩테스트 연습 > 정렬 > K번째수
-tags: ['알고리즘', '코딩테스트']
+tags: ['알고리즘', '코딩테스트', '프로그래머스']
 ---
 
 [K번째수](https://programmers.co.kr/learn/courses/30/lessons/42748) 문제 풀이

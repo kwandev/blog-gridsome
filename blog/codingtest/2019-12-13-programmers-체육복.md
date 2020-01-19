@@ -2,7 +2,7 @@
 title: '[Level 1] 체육복 - 프로그래머스 코딩테스트 연습'
 date: 2019-12-13 14:31:00
 summary: 코딩테스트 연습 > 탐욕법(Greedy) > 체육복
-tags: ['알고리즘', '코딩테스트']
+tags: ['알고리즘', '코딩테스트', '프로그래머스']
 ---
 
 [체육복](https://programmers.co.kr/learn/courses/30/lessons/42862) 문제 풀이

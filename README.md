@@ -8,7 +8,7 @@ starter template을 이용했고, 일부 불필요한 화면은 제외하고 dis
 
 ## Demo URL
 
-[https://blog.khwan.kr](https://blog.khwan.kr)
+[https://khwan.kr](https://khwan.kr)
 
 ## Features
 

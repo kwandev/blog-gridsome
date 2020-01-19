@@ -11,7 +11,8 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Page Not Found'
+    title: 'Page Not Found',
+    description: '페이지를 찾을 수 없습니다.'
   }
 }
 </script>
