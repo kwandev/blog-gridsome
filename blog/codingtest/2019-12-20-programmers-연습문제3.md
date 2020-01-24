@@ -7,8 +7,8 @@ tags: ['알고리즘', '코딩테스트', '프로그래머스']
 
 *Last Update: 2019-12-22*
 
-1. [Level 1 연습문제 (1) 바로가기](/blog/codingtest/2019-12-14-programmers-algorithm-1)
-2. [Level 1 연습문제 (2) 바로가기](/blog/codingtest/2019-12-17-programmers-algorithm-2)
+1. [Level 1 연습문제 (1) 바로가기](/blog/codingtest/2019-12-14-programmers-1)
+2. [Level 1 연습문제 (2) 바로가기](/blog/codingtest/2019-12-17-programmers-2)
 2. Level 1 연습문제 (3)
 
 프로그래머스의 Level1 문제들중 `연습문제`라는 카테고리의 문제들은 다른 문제들에 비해 쉬운 편이니 여러 글을 나눠 쓰지 않고 이번 글에 쭉 적어 볼 생각이다. 못 푼건 물론 안적음.
