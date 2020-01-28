@@ -38,6 +38,7 @@ export default function (Vue, { router, head, isClient }) {
     href: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700'
   })
   head.script.push({
+    key: 'googleadsense',
     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
     async: true,
     'data-ad-client': 'ca-pub-1057562095822051'
