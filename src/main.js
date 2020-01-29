@@ -18,7 +18,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.use(VueDisqus)
 
   head.htmlAttrs = { lang: 'ko' }
-  head.bodyAttrs = { style: 'padding-top: 0 !important;' }
+  head.bodyAttrs = { class: 'padding-top-0' }
 
   head.meta.push({
     key: 'keywords',
@@ -38,6 +38,10 @@ export default function (Vue, { router, head, isClient }) {
   head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700'
+  })
+  head.style.push({
+    type: 'text/css',
+    cssText: '.padding-top-0 { padding-top: 0 !important }'
   })
   head.script.push({
     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
