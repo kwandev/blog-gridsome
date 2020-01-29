@@ -43,9 +43,9 @@ export default function (Vue, { router, head, isClient }) {
     type: 'text/css',
     cssText: '.padding-top-0 { padding-top: 0 !important }'
   })
-  head.script.push({
-    src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-    async: true,
-    'data-ad-client': 'ca-pub-1057562095822051'
-  })
+  // head.script.push({
+  //   src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+  //   async: true,
+  //   'data-ad-client': 'ca-pub-1057562095822051'
+  // })
 }
