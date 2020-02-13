@@ -18,6 +18,8 @@ export default function (Vue, { router, head, isClient }) {
   Vue.use(VueDisqus)
 
   head.htmlAttrs = { lang: 'ko' }
+  head.bodyAttrs = { class: 'padding-top-0' }
+
   head.meta.push({
     key: 'keywords',
     name: 'keywords',
@@ -37,4 +39,13 @@ export default function (Vue, { router, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700'
   })
+  head.style.push({
+    type: 'text/css',
+    cssText: '.padding-top-0 { padding-top: 0 !important }'
+  })
+  // head.script.push({
+  //   src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+  //   async: true,
+  //   'data-ad-client': 'ca-pub-1057562095822051'
+  // })
 }
