@@ -366,11 +366,11 @@ yarn generate
 
 ![nuxt-generate-universal](https://user-images.githubusercontent.com/54297322/75520518-13d41500-5a49-11ea-9ab5-bd9ec217685e.png)
 
-generate한 결과물을 보니 vue-cli의 build 명령어처럼 dist 폴더가 생겼습니다. 살펴보니 제가 만든 링크 index, main, sub별로 폴더와 html 파일이 생겼고 해당 html 파일을 열어보면 안에 내용이 차있습니다. 이 정적 파일들을 웹서버에 올리면 접근이 가능합니다.
+`generate`한 결과물을 보니 `vue-cli`의 `build` 명령어처럼 `dist` 폴더가 생겼다. 살펴보니 내가 미리 만들어둔 링크(index, main, sub)별로 폴더와 html 파일이 생겼고 해당 html 파일을 열어보면 안에 내용이 차있는 걸 확인할 수 있다. 이 정적 파일들을 웹서버에 올리면 접근할 수 있어진다.
 
-그러나 build 했을 때와는 차이가 있다. html에 이미 내용들이 그려져있다는 것이다. 이 것을 **Pre-Rendering**이라고 한다. 서버를 띄워놓지 않고 미리 렌더링한 결과를 만들어 놓음으로써 SEO에 유리한 환경을 만들 수 있다.
+그러나 `build` 했을 때와는 차이가 있다. html에 이미 내용이 그려져 있다는 것이다. 이것을 **Pre-Rendering**이라고 한다. 서버를 띄워놓지 않고 미리 렌더링한 결과를 만들어 놓음으로써 SEO에 유리한 환경을 만들 수 있다.
 
-spa모드도 이어서 확인해보자
+spa모드도 이어서 확인해보자.
 
 #### 5.1.2. 모드 spa
 
@@ -390,9 +390,9 @@ yarn generate --spa
 
 ![nuxt-generate-spa](https://user-images.githubusercontent.com/54297322/75523964-577e4d00-5a50-11ea-997d-24efd8249f42.png)
 
-universal 모드와는 다르게 html에 내용이 차있지 않다. SPA의 특징과 같다. 하지만 dist폴더를 보면 route별로 index파일이 생겨있다.
+`universal` 모드와는 다르게 html에 내용이 채워져있지 않다. SPA의 특징이다. 하지만 dist 폴더를 보면 route 별로 index 파일이 생겨있다.
 
-사실 build 명령을 사용할 때 spa모드를 사용하면 spa모드로 generate 한 것과 같이 dist가 생기는데, 사실 둘 사이의 차이를 모르겠다. 나중에 알아봐야겠다.
+사실 `build` 명령을 사용할 때 spa 모드를 사용하면 spa모드로 `generate` 한 것과 같이 dist가 생기는데, 사실 둘 사이의 차이를 모르겠다. 나중에 알아봐야겠다.
 
 ## 4. 요약
 
@@ -408,14 +408,14 @@ universal 모드와는 다르게 html에 내용이 차있지 않다. SPA의 특�
 
 > 위의 서버는 호스팅을 위한 서버를 얘기하는 것이 아니라, SSR을 위한 서버를 의미합니다
 
-- 모든 페이지가 SEO에 유리해야 하는 쇼핑몰, 블로그, SNS, 게시판과 같은 서비스라면 Universal 모드로 build & start를 이용하면 될 것이다.
-- 일부 페이지만 SEO가 필요하다거나 또는 프로모션, 기업소개 홈페이지 등 페이지 수가 적당한 경우에는 generate로 pre-rendering을 이용하는게 좋겠다.
-- 내부용 서비스, 로그인이 필수로 필요한 경우, SEO가 필요없는 경우에는 SPA를 이용하면 되겠다. 단, nuxt의 spa는 라우트별로 html이 생기기 때문에 vue-cli를 사용하는게 더 적절할 수 있기때문에 잘 고려해서 쓰자.
+- 모든 페이지가 SEO에 유리해야 하는 쇼핑몰, 블로그, SNS, 게시판과 같은 서비스라면 universal 모드로 build & start를 이용하면 될 것이다.
+- 일부 페이지만 SEO가 필요하다거나 또는 프로모션, 기업소개 홈페이지 등 페이지 수가 적당한 경우에는 generate로 pre-rendering을 이용하는 게 좋겠다.
+- 내부용 서비스, 로그인이 필수로 필요한 경우, SEO가 필요없는 경우에는 SPA를 이용하면 되겠다. 단, nuxt의 spa는 라우트별로 html이 생기기 때문에 vue-cli를 사용하는게 더 적절할 수 있기 때문에 잘 고려해서 쓰자.
 
 ---
 
 # 📑 정리
 
 nuxt의 명령어를 하나씩 살펴보며 알아보았다. 나는 단순히 SPA와 SSR의 차이만 알고 있었을 뿐, 실제로 nuxt가 어떤 방식을 제공하고 있는지는 몰랐다.
-Pre-Rendering이란 뭔지, SSR에 서버가 필요할 때는 언제인지, SPA는 언제 사용하면 좋을지에 대해서 잘 이해하고 있어야한다.
+Pre-Rendering이란 뭔지, SSR에 서버가 필요할 때는 언제인지, SPA는 언제 사용하면 좋을지에 대해서 잘 이해하고 있어야 한다.
 그래야 구현하려는 서비스의 특징에 맞게 적절한 방법을 고를 수 있겠다.
