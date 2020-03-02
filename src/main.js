@@ -6,13 +6,13 @@ import VueScrollTo from 'vue-scrollto'
 import VueFuse from 'vue-fuse'
 import VueDisqus from 'vue-disqus'
 
-export default function (Vue, { router, head, isClient }) {
+export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
   Vue.use(VueScrollTo, {
     duration: 500,
-    easing: "ease",
+    easing: 'ease'
   })
   Vue.use(VueFuse)
   Vue.use(VueDisqus)
@@ -43,9 +43,9 @@ export default function (Vue, { router, head, isClient }) {
     type: 'text/css',
     cssText: '.padding-top-0 { padding-top: 0 !important }'
   })
-  // head.script.push({
-  //   src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-  //   async: true,
-  //   'data-ad-client': 'ca-pub-1057562095822051'
-  // })
+  head.script.push({
+    src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+    async: true
+    // 'data-ad-client': 'ca-pub-1057562095822051'
+  })
 }
