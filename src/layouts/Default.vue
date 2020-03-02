@@ -42,7 +42,7 @@
       <slot />
     </div>
 
-    <div class="container-inner mx-auto">
+    <div class="container-inner mx-auto w-full">
       <ins
         class="adsbygoogle"
         style="display:block"
