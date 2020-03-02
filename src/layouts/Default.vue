@@ -42,6 +42,17 @@
       <slot />
     </div>
 
+    <div class="container-inner mx-auto">
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-1057562095822051"
+        data-ad-slot="3604095446"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+    </div>
+
     <footer class="bg-green-700 text-white">
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
         <div class="mb-8 lg:mb-0">
@@ -109,6 +120,8 @@ export default {
   },
   mounted() {
     this.theme = localStorage.getItem('theme') || 'theme-light'
+
+    this.initAd()
   },
   data() {
     return {
@@ -123,6 +136,9 @@ export default {
     updateTheme(theme) {
       this.theme = theme
     },
+    initAd() {
+      ;(adsbygoogle = window.adsbygoogle || []).push({})
+    }
   }
 }
 </script>

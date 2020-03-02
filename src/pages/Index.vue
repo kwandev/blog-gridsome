@@ -35,15 +35,6 @@
         :currentPage="$page.posts.pageInfo.currentPage"
       />
     </div>
-
-     <ins
-      class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-1057562095822051"
-      data-ad-slot="3604095446"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    />
   </Layout>
 </template>
 
@@ -82,14 +73,6 @@ export default {
   },
   components: {
     PaginationPosts
-  },
-  mounted() {
-    this.initAd()
-  },
-  methods: {
-    initAd() {
-      ;(adsbygoogle = window.adsbygoogle || []).push({})
-    }
   }
 }
 </script>
