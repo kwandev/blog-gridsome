@@ -1,8 +1,8 @@
 ---
 title: 12가지 명령어로 배우는 Git 리뷰
 date: 2019-10-26 18:23:59
-summary: git 동영상 강의 리뷰
-tags: ['리뷰', 'git']
+summary: Git 동영상 강의 리뷰
+tags: ["리뷰", "Git"]
 ---
 
 ## zerocho님의 유튜브 무료강의인 을 보고난 후기
