@@ -137,7 +137,7 @@ export default {
       this.theme = theme
     },
     initAd() {
-      ;(adsbygoogle = window.adsbygoogle || []).push({})
+      (adsbygoogle = window.adsbygoogle || []).push({})
     }
   }
 }
