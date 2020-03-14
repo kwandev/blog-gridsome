@@ -1,20 +1,18 @@
 ---
 title: JavaScript로 구현해보는 큐(Queue), 스택(Stack)
-date: 2020-03-03 13:05:23
+date: 2020-03-14 16:50:43
 summary: JavaScript로 가장 기본적인 자료구조형인 큐(Queue)와 스택(Stack)을 구현해보자
 tags: ['JavaScript', '자료구조', '알고리즘']
 ---
 
 지난 면접 중 한 번은 큐와 스택을 화이트보드에 간단하게 구현해보라는 시간이 있었다.
-평소에 전혀 신경을 쓰지도 않고 가볍게 넘어가던 부분이었어서 인지 얼추 코딩은 했지만 아쉬운 부분이 남아 다시 정리해본다.
+코딩은 했지만 아쉬운 부분이 남아 다시 정리해본다.
 
 큐와 스택은 가장 기본적인 자료구조형이면서 선형(linear)자료구조이다. 자바스크립트는 다른 언어와는 다르게 Array로 구현이 충분하기 때문에 각각 구현해보자.
 
-자바스크립트의 class를 실무에서 사용해보질 않았는데 이런 때에라도 써봐야겠다.
-
 ## 큐 (Queue)
 
-큐는 먼저 집어넣은 데이터가 먼저 나오는 선형자료구조이다. 이 특징을 줄여서 \**FIFO(First In First Out)*라고 부른다.
+큐는 먼저 집어넣은 데이터가 먼저 나오는 선형자료구조이다. 이 특징을 줄여서 **FIFO(First In First Out)**라고 부른다.
 
 - 데이터를 집어넣는 **enqueue**
 - 데이터를 추출하는 **dequeue**
@@ -86,7 +84,7 @@ queue.clear()
 # 스택 (Stack)
 
 스택 나중에 집어넣은 데이터가 먼저 나오는 선형자료구조이다.
-이 특징을 줄여서 \*_LIFO(Last In First Out_)\*라고 부른다.
+이 특징을 줄여서 **LIFO(Last In First Out)**라고 부른다.
 
 - 데이터를 집어넣는 **push**
 - 데이터를 추출하는 **pop**
@@ -100,58 +98,58 @@ queue.clear()
 ```javascript
 class Stack () {
   constructor () {
-    this.arr = [];
+    this.arr = []
   }
 
   push (value) {
-    this.arr.push(value);
+    this.arr.push(value)
   }
 
   pop () {
-    return this.arr.pop();
+    return this.arr.pop()
   }
 
   length () {
-    return this.arr.length;
+    return this.arr.length
   }
 
   peek () {
-    return this.arr[this.arr.length - 1];
+    return this.arr[this.arr.length - 1]
   }
 
   isEmpty () {
-    return this.arr.length === 0;
+    return this.arr.length === 0
   }
 
   clear () {
-    this.arr = [];
+    this.arr = []
   }
 }
 
-const stack = new Stack();
+const stack = new Stack()
 
 // 데이터 삽입
-stack.push(1); // arr: [1]
-stack.push(20); // arr: [1, 20]
-stack.push(300); // arr: [1, 20, 300]
-stack.push(4000); // arr: [1, 20, 300, 4000]
+stack.push(1) // arr: [1]
+stack.push(20) // arr: [1, 20]
+stack.push(300) // arr: [1, 20, 300]
+stack.push(4000) // arr: [1, 20, 300, 4000]
 
 // 데이터 추출
-stack.pop(); // 4000
+stack.pop() // 4000
 
 // 현재 스택 길이
-stack.length(); // 3
+stack.length() // 3
 
 // 다음에 추출될 데이터
-stack.peek(); // 300
+stack.peek() // 300
 
 // 스택이 비어있는지 확인
-stack.isEmpty(); // false
+stack.isEmpty() // false
 
 // 스택 초기화
-stack.clear();
+stack.clear()
 ```
 
 # 마무리
 
-간단하게 구현해보았다. 절대 어렵지 않으며 이해하고 있으면 도움될 내용이다. 자바스크립트 이벤트 루프를 살펴보면 콜 스택, 태스크 큐 라는 용어가 등장하는데, 위 자료구조를 알고 있으면 이벤트 루프를 이해하기 수월할 것이다.
+간단하게 구현해보았다. 절대 어렵지 않으며 이해하고 있으면 분명 도움될 내용이다. 자바스크립트 이벤트 루프를 살펴보면 콜 스택, 태스크 큐 라는 용어가 등장하는데, 위 자료구조를 알고 있으면 이벤트 루프를 이해하기 수월할 것이다.
