@@ -69,14 +69,19 @@ query Posts ($page: Int) {
 </page-query>
 
 <script>
+import Mixins from '../components/Mixins'
 import PaginationPosts from '../components/PaginationPosts'
 
 export default {
   metaInfo: {
     title: 'Home'
   },
+  mixins: [Mixins],
   components: {
     PaginationPosts
+  },
+  mounted() {
+    this.initAd()
   }
 }
 </script>

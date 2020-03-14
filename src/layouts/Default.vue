@@ -120,11 +120,6 @@ export default {
   },
   mounted() {
     this.theme = localStorage.getItem('theme') || 'theme-light'
-
-    window.onload = () => {
-      this.initAd()
-    }
-    this.initAd()
   },
   data() {
     return {
@@ -138,11 +133,6 @@ export default {
     },
     updateTheme(theme) {
       this.theme = theme
-    },
-    initAd() {
-      if (window.adsbygoogle) {
-        ;(adsbygoogle = window.adsbygoogle || []).push({})
-      }
     }
   }
 }

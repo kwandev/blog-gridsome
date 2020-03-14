@@ -8,7 +8,8 @@
           :to="tag.path"
           v-for="tag in $page.post.tags"
           :key="tag.id"
-          class="bg-gray-300 rounded-full px-4 py-2 mr-4 hover:bg-green-300">
+          class="bg-gray-300 rounded-full px-4 py-2 mr-4 hover:bg-green-300"
+        >
           {{ tag.title }}
         </g-link>
       </div>
@@ -39,22 +40,28 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
+import Mixins from '../components/Mixins'
+
 export default {
-  metaInfo () {
+  metaInfo() {
     const summary = this.$page.post.summary
     const contents = this.$page.post.content.replace(/(<([^>]+)>)|\n/gi, '').substr(0, 115)
     const description = summary + ' | ' + contents.substr(0, 115 - summary.length) + '..'
-    const keywords = this.$page.post.tags.map(item => item.title).join(', ')
+    const keywords = this.$page.post.tags.map((item) => item.title).join(', ')
     return {
       title: this.$page.post.title,
       meta: [
         { key: 'description', name: 'description', content: description },
-        { key: 'keywords', name: 'keywords', content: keywords },
-      ],
+        { key: 'keywords', name: 'keywords', content: keywords }
+      ]
     }
   },
+  mixins: [Mixins],
+  mounted() {
+    this.initAd()
+  },
   methods: {
-    backToPage () {
+    backToPage() {
       this.$router.back()
     }
   }
@@ -62,4 +69,3 @@ export default {
 </script>
 
 <style src="../css/github-markdown.css" />
-
