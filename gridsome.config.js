@@ -7,14 +7,12 @@
 const tailwind = require('tailwindcss')
 const purgecss = require('@fullhuman/postcss-purgecss')
 
-const postcssPlugins = [
-  tailwind(),
-]
+const postcssPlugins = [tailwind()]
 
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
-  siteName: 'khwan blog',
+  siteName: 'khwan',
   // siteDescription: '그냥',
   siteUrl: 'https://khwan.kr',
   plugins: [
@@ -36,11 +34,11 @@ module.exports = {
       options: {
         contentTypeName: 'Post',
         feedOptions: {
-          title: 'khwan blog',
+          title: 'khwan',
           feed_url: 'https://khwan.kr/rss.xml',
           site_url: 'https://khwan.kr'
         },
-        feedItemOptions: node => ({
+        feedItemOptions: (node) => ({
           title: node.title,
           description: node.summary,
           url: 'https://khwan.kr' + node.path,
@@ -56,7 +54,7 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        cacheTime: 600000, // default
+        cacheTime: 600000 // default
       }
     },
     {
@@ -71,19 +69,17 @@ module.exports = {
   },
   transformers: {
     remark: {
-      plugins: [
-        [ 'gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ]
-      ],
+      plugins: [['gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true }]],
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
+      anchorClassName: 'icon icon-link'
     }
   },
   css: {
     loaderOptions: {
       postcss: {
-        plugins: postcssPlugins,
-      },
-    },
-  },
+        plugins: postcssPlugins
+      }
+    }
+  }
 }
