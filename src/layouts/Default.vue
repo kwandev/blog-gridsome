@@ -120,7 +120,7 @@ export default {
   },
   mounted() {
     this.theme = localStorage.getItem('theme') || 'theme-light'
-    
+
     window.onload = () => {
       this.initAd()
     }
@@ -140,7 +140,9 @@ export default {
       this.theme = theme
     },
     initAd() {
-      (adsbygoogle = window.adsbygoogle || []).push({})
+      if (window.adsbygoogle) {
+        ;(adsbygoogle = window.adsbygoogle || []).push({})
+      }
     }
   }
 }
