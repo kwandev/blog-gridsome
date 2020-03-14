@@ -2,7 +2,9 @@
   <Layout>
     <div class="container-inner mx-auto py-16">
       <div v-for="post in $page.posts.edges" :key="post.id" class="post border-gray-400 border-b mb-12">
-        <h2 class="text-3xl font-bold"><g-link :to="post.node.path" class="text-copy-primary">{{ post.node.title }}</g-link></h2>
+        <h2 class="text-3xl font-bold">
+          <g-link :to="post.node.path" class="text-copy-primary">{{ post.node.title }}</g-link>
+        </h2>
         <div class="text-copy-secondary mb-4">
           <span>{{ post.node.date }}</span>
           <span> &middot; </span>
@@ -18,7 +20,8 @@
             :to="tag.path"
             v-for="tag in post.node.tags"
             :key="tag.id"
-            class="inline-block mr-2 mb-2 px-4 py-2 text-base rounded-full bg-gray-300 hover:bg-green-300">
+            class="inline-block mr-2 mb-2 px-4 py-2 text-base rounded-full bg-gray-300 hover:bg-green-300"
+          >
             {{ tag.title }}
           </g-link>
         </div>
@@ -26,7 +29,8 @@
         <div class="mb-6">
           <g-link :to="post.node.path" class="font-bold uppercase">Read More</g-link>
         </div>
-      </div> <!-- end post -->
+      </div>
+      <!-- end post -->
 
       <pagination-posts
         v-if="$page.posts.pageInfo.totalPages > 1"
@@ -69,11 +73,10 @@ import PaginationPosts from '../components/PaginationPosts'
 
 export default {
   metaInfo: {
-    title: '글 목록'
+    title: 'Home'
   },
   components: {
     PaginationPosts
   }
 }
 </script>
-

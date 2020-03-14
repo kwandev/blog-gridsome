@@ -1,5 +1,5 @@
 {
-  "name": "khwan-blog",
+  "name": "khwan",
   "private": true,
   "scripts": {
     "build": "gridsome build",
