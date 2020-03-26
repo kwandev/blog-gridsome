@@ -1,6 +1,6 @@
 ---
 title: Docker 커맨드 정리
-date: 2020-03-23 15:22:00
+date: 2020-03-26 15:22:00
 summary: Docker를 공부, 적용해보면서 접해보는 커맨드나 내용을 정리해보자
 tags: ['Docker', 'Node', 'Express']
 ---
@@ -85,6 +85,14 @@ $ docker run --name node-nginx-instance -p 3000:3000 node-nginx:test
 $ docker ps
 ```
 
+### 모든 컨테이너 확인
+
+정지, 삭제된 컨테이너들까지 확인할 수 있다.
+
+```bash
+$ docker ps -a
+```
+
 ### 컨테이너 삭제
 
 ```bash
@@ -95,10 +103,10 @@ $ docker rm [container id]
 $ docker rm [container id], [container id], ...
 ```
 
-### 모든 컨테이너 확인
-
-정지, 삭제된 컨테이너들까지 확인할 수 있다.
+### 컨테이너 시작
 
 ```bash
-$ docker ps -a
+$ docker start [container id]
+
+$ docker restart [container id]
 ```
