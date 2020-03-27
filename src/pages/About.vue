@@ -58,10 +58,16 @@
 </template>
 
 <script>
+import Mixins from '../components/Mixins'
+
 export default {
   metaInfo: {
     title: 'About',
     description: 'Front-end 개발자 이경환입니다. 저에 대한 간단한 소개입니다.'
+  },
+  mixins: [Mixins],
+  mounted() {
+    this.initAd()
   }
 }
 </script>

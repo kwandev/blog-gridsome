@@ -39,15 +39,9 @@ query Tags {
 </page-query>
 
 <script>
-import Mixins from '../components/Mixins'
-
 export default {
   metaInfo: {
     title: 'Tags'
-  },
-  mixins: [Mixins],
-  mounted() {
-    this.initAd()
   }
 }
 </script>

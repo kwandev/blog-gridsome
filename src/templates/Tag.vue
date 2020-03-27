@@ -61,7 +61,6 @@ query Tag ($id: ID!, $page: Int) {
 </page-query>
 
 <script>
-import Mixins from '../components/Mixins'
 import PaginationPosts from '../components/PaginationPosts'
 
 export default {
@@ -72,10 +71,6 @@ export default {
   },
   components: {
     PaginationPosts
-  },
-  mixins: [Mixins],
-  mounted() {
-    this.initAd()
   }
 }
 </script>
