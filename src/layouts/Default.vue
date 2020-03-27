@@ -29,9 +29,8 @@
             <search-input />
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <theme-switcher :theme="theme" @themeChanged="updateTheme" />
-          </li>
-          <li class="mr-8 mb-6 lg:mb-0">
+            <theme-switcher :theme="theme" @themeChanged="updateTheme" class="mr-5 inline-block align-middle" />
+            <g-link to="/tags" class="mr-5 text-copy-primary hover:text-gray-600">Tags</g-link>
             <g-link to="/about" class="text-copy-primary hover:text-gray-600">About</g-link>
           </li>
         </ul>

@@ -39,10 +39,6 @@ export default function(Vue, { router, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700'
   })
-  head.style.push({
-    type: 'text/css',
-    cssText: '.padding-top-0 { padding-top: 0 !important }'
-  })
   head.script.push({
     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
     async: true
