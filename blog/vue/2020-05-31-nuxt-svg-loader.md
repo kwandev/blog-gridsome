@@ -2,7 +2,7 @@
 title: Nuxt에서 svg-sprite-loader 사용하기
 date: 2020-05-31 23:11:11
 summary: Nuxt에서 기본 내장된 loader가 아닌 다른 svg-loader를 사용할 때 설정을 해보자
-tags: ['Vue', 'Nuxt', '']
+tags: ['Vue', 'Nuxt', 'troubleshooting']
 ---
 
 최근 회사에서 Nuxt를 사용할 일이 있었는데, Nuxt에 기본 내장된 loader가 아닌 다른 loader를 선택해서 사용할때 겪었던 문제를 기록해두려한다.
