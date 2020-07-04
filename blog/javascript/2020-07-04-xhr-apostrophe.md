@@ -2,7 +2,7 @@
 title: Axios Header에 특수문자가 있을경우 에러처리
 date: 2020-07-04 15:00:00
 summary: axios를 사용할 때 아퍼스트로피(apostrophe)가 포함되어 있을 경우 에러처리를 어떻게 해야할까
-tags: ["JavaScript", "axios"]
+tags: ["JavaScript", "axios", "troubleshooting"]
 ---
 
 # 👀 원인
